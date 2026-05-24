@@ -1,0 +1,35 @@
+{
+  "tinyllama": {
+    "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "actual_depth": 22,
+    "hidden_size": 2048,
+    "avg_R_F": 0.01640258701306514,
+    "avg_sigma_F_sq": 0.050475174857406685,
+    "L_star": 131.54295015285402,
+    "L_star_RF0": 126.57818654377827,
+    "L_star_cumulative": 3,
+    "kappa": 0.16724575489933755
+  },
+  "qwen2.5-1.5b": {
+    "model": "Qwen/Qwen2.5-1.5B",
+    "actual_depth": 28,
+    "hidden_size": 1536,
+    "avg_R_F": 0.1259980363804581,
+    "avg_sigma_F_sq": 16.626942293212885,
+    "L_star": 0.5327741397038083,
+    "L_star_RF0": 0.38425923337321394,
+    "L_star_cumulative": 2,
+    "kappa": 52.55510339816116
+  },
+  "pythia-1b": {
+    "model": "EleutherAI/pythia-1b",
+    "actual_depth": 16,
+    "hidden_size": 2048,
+    "avg_R_F": 0.17323176256613804,
+    "avg_sigma_F_sq": 1.0238929282408207,
+    "L_star": 9.996422562677909,
+    "L_star_RF0": 6.239965061491213,
+    "L_star_cumulative": 1,
+    "kappa": 1.6005725948137404
+  }
+}

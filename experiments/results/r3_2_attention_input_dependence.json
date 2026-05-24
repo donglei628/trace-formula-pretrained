@@ -1,0 +1,903 @@
+{
+  "experiment_id": "R3.2",
+  "date_completed": "2026-05-21",
+  "models_tested": [
+    "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "EleutherAI/pythia-1b"
+  ],
+  "input_types": [
+    "random_tokens",
+    "natural_text",
+    "repeated_tokens"
+  ],
+  "key_findings": "ARCHITECTURAL: alpha_attn varies little across input types (CV < 30%)",
+  "per_model": {
+    "tinyllama": {
+      "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+      "hidden_size": 2048,
+      "num_layers": 22,
+      "per_input_type": {
+        "random_tokens": [
+          {
+            "layer": 0,
+            "R_F_linear": 0.0005204637686115783,
+            "R_F_empirical": 0.15214788764715195,
+            "R_F_empirical_std": 0.004290872875707328,
+            "alpha_attn": 292.33137217799265
+          },
+          {
+            "layer": 1,
+            "R_F_linear": 0.005388911146079939,
+            "R_F_empirical": 0.02573956660926342,
+            "R_F_empirical_std": 0.001326810879534156,
+            "alpha_attn": 4.776394694870258
+          },
+          {
+            "layer": 2,
+            "R_F_linear": 0.003291992362229928,
+            "R_F_empirical": 0.04491843581199646,
+            "R_F_empirical_std": 0.008924934479522223,
+            "alpha_attn": 13.644756994991821
+          },
+          {
+            "layer": 3,
+            "R_F_linear": 0.001238562568135222,
+            "R_F_empirical": 0.021799386106431486,
+            "R_F_empirical_std": 0.0011985702552220186,
+            "alpha_attn": 17.600552985589264
+          },
+          {
+            "layer": 4,
+            "R_F_linear": 0.0005479463784592607,
+            "R_F_empirical": 0.008327942853793503,
+            "R_F_empirical_std": 0.0005632439688217648,
+            "alpha_attn": 15.198463173003118
+          },
+          {
+            "layer": 5,
+            "R_F_linear": 0.0007836572260818604,
+            "R_F_empirical": 0.01316364798694849,
+            "R_F_empirical_std": 0.000524562143104592,
+            "alpha_attn": 16.797711485114824
+          },
+          {
+            "layer": 6,
+            "R_F_linear": 0.0010632330461347957,
+            "R_F_empirical": 0.006645351368933916,
+            "R_F_empirical_std": 0.00027138412674360444,
+            "alpha_attn": 6.250136217165155
+          },
+          {
+            "layer": 7,
+            "R_F_linear": 0.002158492244918193,
+            "R_F_empirical": 0.005054467637091875,
+            "R_F_empirical_std": 0.0004637593801379951,
+            "alpha_attn": 2.3416658776475887
+          },
+          {
+            "layer": 8,
+            "R_F_linear": 0.0005099656002488819,
+            "R_F_empirical": 0.012060421705245971,
+            "R_F_empirical_std": 0.0006297704985806759,
+            "alpha_attn": 23.64948086568985
+          },
+          {
+            "layer": 9,
+            "R_F_linear": 0.0005370845663938873,
+            "R_F_empirical": 0.006278492975980043,
+            "R_F_empirical_std": 0.00025968181064418513,
+            "alpha_attn": 11.689952325637151
+          },
+          {
+            "layer": 10,
+            "R_F_linear": 0.0029673177705731636,
+            "R_F_empirical": 0.02514120899140835,
+            "R_F_empirical_std": 0.0006825852887332532,
+            "alpha_attn": 8.472705296592519
+          },
+          {
+            "layer": 11,
+            "R_F_linear": 0.001073008480084902,
+            "R_F_empirical": 0.0032648924272507427,
+            "R_F_empirical_std": 0.00026388985912049475,
+            "alpha_attn": 3.0427461551770842
+          },
+          {
+            "layer": 12,
+            "R_F_linear": 0.0035249455144939434,
+            "R_F_empirical": 0.00430391647387296,
+            "R_F_empirical_std": 0.0003727656176075733,
+            "alpha_attn": 1.2209880851139479
+          },
+          {
+            "layer": 13,
+            "R_F_linear": 0.0028384658119968488,
+            "R_F_empirical": 0.005024819821119309,
+            "R_F_empirical_std": 0.0002536463157911364,
+            "alpha_attn": 1.7702590603282162
+          },
+          {
+            "layer": 14,
+            "R_F_linear": 0.002642147389468336,
+            "R_F_empirical": 0.0037386756855994465,
+            "R_F_empirical_std": 0.00024264801823881672,
+            "alpha_attn": 1.41501405277461
+          },
+          {
+            "layer": 15,
+            "R_F_linear": 0.0010852119129523036,
+            "R_F_empirical": 0.0018255806993693114,
+            "R_F_empirical_std": 0.0001638482142550861,
+            "alpha_attn": 1.6822342968967647
+          },
+          {
+            "layer": 16,
+            "R_F_linear": 0.011946316408285616,
+            "R_F_empirical": 0.011057708878070116,
+            "R_F_empirical_std": 0.0005569380963798491,
+            "alpha_attn": 0.925616608513802
+          },
+          {
+            "layer": 17,
+            "R_F_linear": 0.003317775840352762,
+            "R_F_empirical": 0.020212935656309126,
+            "R_F_empirical_std": 0.0008198281769019751,
+            "alpha_attn": 6.09231504144053
+          },
+          {
+            "layer": 18,
+            "R_F_linear": 0.008308766335904253,
+            "R_F_empirical": 0.02205468378961086,
+            "R_F_empirical_std": 0.0005822081104186503,
+            "alpha_attn": 2.6543872938521655
+          },
+          {
+            "layer": 19,
+            "R_F_linear": 0.009082923646297762,
+            "R_F_empirical": 0.05156874619424343,
+            "R_F_empirical_std": 0.002269582594889496,
+            "alpha_attn": 5.67754923441012
+          },
+          {
+            "layer": 20,
+            "R_F_linear": 0.026195046476845854,
+            "R_F_empirical": 0.10003326162695884,
+            "R_F_empirical_std": 0.0020810029800940027,
+            "alpha_attn": 3.8187854224797637
+          },
+          {
+            "layer": 21,
+            "R_F_linear": 0.022526535957821836,
+            "R_F_empirical": 0.007727461354807019,
+            "R_F_empirical_std": 0.0007737257894033945,
+            "alpha_attn": 0.3430381559453144
+          }
+        ],
+        "natural_text": [
+          {
+            "layer": 0,
+            "R_F_linear": 0.0005204637686115783,
+            "R_F_empirical": 0.12501755356788635,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 240.20414312679438
+          },
+          {
+            "layer": 1,
+            "R_F_linear": 0.005388911146079939,
+            "R_F_empirical": 0.007472948171198368,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 1.3867269228653776
+          },
+          {
+            "layer": 2,
+            "R_F_linear": 0.003291992362229928,
+            "R_F_empirical": 0.04965159296989441,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 15.08253589515057
+          },
+          {
+            "layer": 3,
+            "R_F_linear": 0.001238562568135222,
+            "R_F_empirical": 0.043566808104515076,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 35.1752985479847
+          },
+          {
+            "layer": 4,
+            "R_F_linear": 0.0005479463784592607,
+            "R_F_empirical": 0.018086109310388565,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 33.00707883359658
+          },
+          {
+            "layer": 5,
+            "R_F_linear": 0.0007836572260818604,
+            "R_F_empirical": 0.019701775163412094,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 25.140807112718512
+          },
+          {
+            "layer": 6,
+            "R_F_linear": 0.0010632330461347957,
+            "R_F_empirical": 0.012684541754424572,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 11.930161313681026
+          },
+          {
+            "layer": 7,
+            "R_F_linear": 0.002158492244918193,
+            "R_F_empirical": 0.013712464831769466,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 6.352797821744859
+          },
+          {
+            "layer": 8,
+            "R_F_linear": 0.0005099656002488819,
+            "R_F_empirical": 0.011769014410674572,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 23.07805547066481
+          },
+          {
+            "layer": 9,
+            "R_F_linear": 0.0005370845663938873,
+            "R_F_empirical": 0.010450447909533978,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 19.45773266154482
+          },
+          {
+            "layer": 10,
+            "R_F_linear": 0.0029673177705731636,
+            "R_F_empirical": 0.011862451210618019,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 3.997701671272869
+          },
+          {
+            "layer": 11,
+            "R_F_linear": 0.001073008480084902,
+            "R_F_empirical": 0.002871162025257945,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 2.6758055304751776
+          },
+          {
+            "layer": 12,
+            "R_F_linear": 0.0035249455144939434,
+            "R_F_empirical": 0.007646083831787109,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 2.1691353243185705
+          },
+          {
+            "layer": 13,
+            "R_F_linear": 0.0028384658119968488,
+            "R_F_empirical": 0.004948494024574757,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 1.7433692537918968
+          },
+          {
+            "layer": 14,
+            "R_F_linear": 0.002642147389468336,
+            "R_F_empirical": 0.0024309272412210703,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.9200573938118689
+          },
+          {
+            "layer": 15,
+            "R_F_linear": 0.0010852119129523036,
+            "R_F_empirical": 0.0019108252599835396,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 1.7607853702832719
+          },
+          {
+            "layer": 16,
+            "R_F_linear": 0.011946316408285616,
+            "R_F_empirical": 0.006961135659366846,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.5827014304207451
+          },
+          {
+            "layer": 17,
+            "R_F_linear": 0.003317775840352762,
+            "R_F_empirical": 0.017637496814131737,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 5.316060416021485
+          },
+          {
+            "layer": 18,
+            "R_F_linear": 0.008308766335904253,
+            "R_F_empirical": 0.015602919273078442,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 1.8778863964021149
+          },
+          {
+            "layer": 19,
+            "R_F_linear": 0.009082923646297762,
+            "R_F_empirical": 0.022406568750739098,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 2.466889475600966
+          },
+          {
+            "layer": 20,
+            "R_F_linear": 0.026195046476845854,
+            "R_F_empirical": 0.03143709525465965,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 1.2001160327181444
+          },
+          {
+            "layer": 21,
+            "R_F_linear": 0.022526535957821836,
+            "R_F_empirical": 0.01950172707438469,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.8657224133750201
+          }
+        ],
+        "repeated_tokens": [
+          {
+            "layer": 0,
+            "R_F_linear": 0.0005204637686115783,
+            "R_F_empirical": 0.015954911708831787,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 30.65518230287981
+          },
+          {
+            "layer": 1,
+            "R_F_linear": 0.005388911146079939,
+            "R_F_empirical": 0.0513450987637043,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 9.527917119408123
+          },
+          {
+            "layer": 2,
+            "R_F_linear": 0.003291992362229928,
+            "R_F_empirical": 0.0215202234685421,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 6.537142587404043
+          },
+          {
+            "layer": 3,
+            "R_F_linear": 0.001238562568135222,
+            "R_F_empirical": 0.06214766204357147,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 50.17724872562628
+          },
+          {
+            "layer": 4,
+            "R_F_linear": 0.0005479463784592607,
+            "R_F_empirical": 0.00902238767594099,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 16.4658222604017
+          },
+          {
+            "layer": 5,
+            "R_F_linear": 0.0007836572260818604,
+            "R_F_empirical": 0.009906870312988758,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 12.641841334790286
+          },
+          {
+            "layer": 6,
+            "R_F_linear": 0.0010632330461347957,
+            "R_F_empirical": 0.014556562528014183,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 13.690848474783689
+          },
+          {
+            "layer": 7,
+            "R_F_linear": 0.002158492244918193,
+            "R_F_empirical": 0.005594348534941673,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 2.591785329835039
+          },
+          {
+            "layer": 8,
+            "R_F_linear": 0.0005099656002488819,
+            "R_F_empirical": 0.01599249430000782,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 31.35994720467988
+          },
+          {
+            "layer": 9,
+            "R_F_linear": 0.0005370845663938873,
+            "R_F_empirical": 0.002238492714241147,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 4.167858944953336
+          },
+          {
+            "layer": 10,
+            "R_F_linear": 0.0029673177705731636,
+            "R_F_empirical": 0.0008341963402926922,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.28112807754039765
+          },
+          {
+            "layer": 11,
+            "R_F_linear": 0.001073008480084902,
+            "R_F_empirical": 6.533684791065753e-05,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.06089126891661446
+          },
+          {
+            "layer": 12,
+            "R_F_linear": 0.0035249455144939434,
+            "R_F_empirical": 0.0012711016461253166,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.3606017854456969
+          },
+          {
+            "layer": 13,
+            "R_F_linear": 0.0028384658119968488,
+            "R_F_empirical": 0.004105273634195328,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 1.4463001868277867
+          },
+          {
+            "layer": 14,
+            "R_F_linear": 0.002642147389468336,
+            "R_F_empirical": 0.0056725251488387585,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 2.1469374386340374
+          },
+          {
+            "layer": 15,
+            "R_F_linear": 0.0010852119129523036,
+            "R_F_empirical": 0.0008271960541605949,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.7622438016831384
+          },
+          {
+            "layer": 16,
+            "R_F_linear": 0.011946316408285616,
+            "R_F_empirical": 1.4904835552442819e-05,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.0012476511623369746
+          },
+          {
+            "layer": 17,
+            "R_F_linear": 0.003317775840352762,
+            "R_F_empirical": 0.001396635896526277,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.4209554725004508
+          },
+          {
+            "layer": 18,
+            "R_F_linear": 0.008308766335904253,
+            "R_F_empirical": 0.0007788133225403726,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.0937339300510746
+          },
+          {
+            "layer": 19,
+            "R_F_linear": 0.009082923646297762,
+            "R_F_empirical": 0.00015490499208681285,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.017054529809898026
+          },
+          {
+            "layer": 20,
+            "R_F_linear": 0.026195046476845854,
+            "R_F_empirical": 0.0010893980506807566,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.04158794112633814
+          },
+          {
+            "layer": 21,
+            "R_F_linear": 0.022526535957821836,
+            "R_F_empirical": 0.0012535315472632647,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.055646884616895737
+          }
+        ]
+      },
+      "friedman_test": {
+        "chi2": 6.818181818181813,
+        "p": 0.03307125148830112
+      },
+      "natural_random_ratio": {
+        "mean": 1.2017232493535468,
+        "median": 0.9803239807042131,
+        "values": [
+          0.821684451234815,
+          0.29032921512007615,
+          1.105372261351849,
+          1.9985337152068485,
+          2.1717379223069564,
+          1.4966804933515416,
+          1.9087842087211555,
+          2.712939485682222,
+          0.975837719302581,
+          1.6644834914229896,
+          0.47183296613427955,
+          0.8794047856809958,
+          1.7765409431625514,
+          0.9848102421058452,
+          0.6502107820115196,
+          1.0466944904948206,
+          0.6295278466927555,
+          0.8725846217507,
+          0.7074651090861884,
+          0.43449900190205365,
+          0.31426642242151376,
+          2.5236913106337644
+        ]
+      }
+    },
+    "pythia-1b": {
+      "model": "EleutherAI/pythia-1b",
+      "hidden_size": 2048,
+      "num_layers": 16,
+      "per_input_type": {
+        "random_tokens": [
+          {
+            "layer": 0,
+            "R_F_linear": 0.0004934395217457459,
+            "R_F_empirical": 0.0005189672840060667,
+            "R_F_empirical_std": 3.07879658107012e-05,
+            "alpha_attn": 1.0517343283934892
+          },
+          {
+            "layer": 1,
+            "R_F_linear": 0.0022562942630714026,
+            "R_F_empirical": 0.012858494371175765,
+            "R_F_empirical_std": 0.001281144776151157,
+            "alpha_attn": 5.69894387519827
+          },
+          {
+            "layer": 2,
+            "R_F_linear": 0.003999567337217994,
+            "R_F_empirical": 0.09968241974711418,
+            "R_F_empirical_std": 0.006444492154358853,
+            "alpha_attn": 24.923300782941926
+          },
+          {
+            "layer": 3,
+            "R_F_linear": 0.000713938453752911,
+            "R_F_empirical": 0.0028618372743949294,
+            "R_F_empirical_std": 0.00029688431398412714,
+            "alpha_attn": 4.008520985739467
+          },
+          {
+            "layer": 4,
+            "R_F_linear": 0.0005707818561522337,
+            "R_F_empirical": 0.0216239333152771,
+            "R_F_empirical_std": 0.00135849860047406,
+            "alpha_attn": 37.88475944391226
+          },
+          {
+            "layer": 5,
+            "R_F_linear": 0.0005396638225518598,
+            "R_F_empirical": 0.032928087562322614,
+            "R_F_empirical_std": 0.0007607011495620941,
+            "alpha_attn": 61.01592544524947
+          },
+          {
+            "layer": 6,
+            "R_F_linear": 0.0004904781641521461,
+            "R_F_empirical": 0.014328458439558744,
+            "R_F_empirical_std": 0.001098488623516765,
+            "alpha_attn": 29.21324431298039
+          },
+          {
+            "layer": 7,
+            "R_F_linear": 0.001393939951442061,
+            "R_F_empirical": 0.0322345620021224,
+            "R_F_empirical_std": 0.0015265858869690904,
+            "alpha_attn": 23.124785231081905
+          },
+          {
+            "layer": 8,
+            "R_F_linear": 0.000489672708091539,
+            "R_F_empirical": 0.0341937255114317,
+            "R_F_empirical_std": 0.0011782643794357966,
+            "alpha_attn": 69.82975556203462
+          },
+          {
+            "layer": 9,
+            "R_F_linear": 0.001051671908996249,
+            "R_F_empirical": 0.04692576341331005,
+            "R_F_empirical_std": 0.0030181332681059867,
+            "alpha_attn": 44.62015483336202
+          },
+          {
+            "layer": 10,
+            "R_F_linear": 0.003575940384954577,
+            "R_F_empirical": 0.009241628926247358,
+            "R_F_empirical_std": 0.0007054845953081672,
+            "alpha_attn": 2.5843912177984336
+          },
+          {
+            "layer": 11,
+            "R_F_linear": 0.0007560717887833512,
+            "R_F_empirical": 0.04300898276269436,
+            "R_F_empirical_std": 0.002488648908606911,
+            "alpha_attn": 56.884787133643975
+          },
+          {
+            "layer": 12,
+            "R_F_linear": 0.0005760185400323596,
+            "R_F_empirical": 0.02818012274801731,
+            "R_F_empirical_std": 0.002153378509163585,
+            "alpha_attn": 48.92224952765271
+          },
+          {
+            "layer": 13,
+            "R_F_linear": 0.0043758534439008396,
+            "R_F_empirical": 0.25396222770214083,
+            "R_F_empirical_std": 0.006277497910222178,
+            "alpha_attn": 58.03718770703323
+          },
+          {
+            "layer": 14,
+            "R_F_linear": 0.0011913603200830976,
+            "R_F_empirical": 0.12670184299349785,
+            "R_F_empirical_std": 0.003346913243544428,
+            "alpha_attn": 106.35056486073027
+          },
+          {
+            "layer": 15,
+            "R_F_linear": 0.012133376552430809,
+            "R_F_empirical": 0.27454224675893785,
+            "R_F_empirical_std": 0.013743827814878483,
+            "alpha_attn": 22.62702765158441
+          }
+        ],
+        "natural_text": [
+          {
+            "layer": 0,
+            "R_F_linear": 0.0004934395217457459,
+            "R_F_empirical": 5.617509668809362e-05,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.11384393469203892
+          },
+          {
+            "layer": 1,
+            "R_F_linear": 0.0022562942630714026,
+            "R_F_empirical": 0.012816832400858402,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 5.680479098241097
+          },
+          {
+            "layer": 2,
+            "R_F_linear": 0.003999567337217994,
+            "R_F_empirical": 0.015606913715600967,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 3.9021505077238614
+          },
+          {
+            "layer": 3,
+            "R_F_linear": 0.000713938453752911,
+            "R_F_empirical": 0.05325645953416824,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 74.59530895726192
+          },
+          {
+            "layer": 4,
+            "R_F_linear": 0.0005707818561522337,
+            "R_F_empirical": 0.025244873017072678,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 44.22858355599096
+          },
+          {
+            "layer": 5,
+            "R_F_linear": 0.0005396638225518598,
+            "R_F_empirical": 0.05567102134227753,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 103.158705504903
+          },
+          {
+            "layer": 6,
+            "R_F_linear": 0.0004904781641521461,
+            "R_F_empirical": 0.023740360513329506,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 48.40248200318507
+          },
+          {
+            "layer": 7,
+            "R_F_linear": 0.001393939951442061,
+            "R_F_empirical": 0.05734851583838463,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 41.141310125343885
+          },
+          {
+            "layer": 8,
+            "R_F_linear": 0.000489672708091539,
+            "R_F_empirical": 0.02924138866364956,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 59.71619038687204
+          },
+          {
+            "layer": 9,
+            "R_F_linear": 0.001051671908996249,
+            "R_F_empirical": 0.045425351709127426,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 43.193463018787774
+          },
+          {
+            "layer": 10,
+            "R_F_linear": 0.003575940384954577,
+            "R_F_empirical": 0.013442693278193474,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 3.7592050848365104
+          },
+          {
+            "layer": 11,
+            "R_F_linear": 0.0007560717887833512,
+            "R_F_empirical": 0.03247865289449692,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 42.957101926472646
+          },
+          {
+            "layer": 12,
+            "R_F_linear": 0.0005760185400323596,
+            "R_F_empirical": 0.0182383731007576,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 31.662823039919864
+          },
+          {
+            "layer": 13,
+            "R_F_linear": 0.0043758534439008396,
+            "R_F_empirical": 0.09761302173137665,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 22.307196295029446
+          },
+          {
+            "layer": 14,
+            "R_F_linear": 0.0011913603200830976,
+            "R_F_empirical": 0.14371933043003082,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 120.63464596504807
+          },
+          {
+            "layer": 15,
+            "R_F_linear": 0.012133376552430809,
+            "R_F_empirical": 0.023279771208763123,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 1.918655627983394
+          }
+        ],
+        "repeated_tokens": [
+          {
+            "layer": 0,
+            "R_F_linear": 0.0004934395217457459,
+            "R_F_empirical": 0.0001871321874205023,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.37924037125855864
+          },
+          {
+            "layer": 1,
+            "R_F_linear": 0.0022562942630714026,
+            "R_F_empirical": 0.11200835555791855,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 49.64261860305671
+          },
+          {
+            "layer": 2,
+            "R_F_linear": 0.003999567337217994,
+            "R_F_empirical": 0.04716497287154198,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 11.792518763879304
+          },
+          {
+            "layer": 3,
+            "R_F_linear": 0.000713938453752911,
+            "R_F_empirical": 3.582137287594378e-05,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 0.050174315009429794
+          },
+          {
+            "layer": 4,
+            "R_F_linear": 0.0005707818561522337,
+            "R_F_empirical": 0.015562834218144417,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 27.265818018563017
+          },
+          {
+            "layer": 5,
+            "R_F_linear": 0.0005396638225518598,
+            "R_F_empirical": 0.028985539451241493,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 53.71036234035511
+          },
+          {
+            "layer": 6,
+            "R_F_linear": 0.0004904781641521461,
+            "R_F_empirical": 0.0020856293849647045,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 4.252236974850818
+          },
+          {
+            "layer": 7,
+            "R_F_linear": 0.001393939951442061,
+            "R_F_empirical": 0.05190803483128548,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 37.23835792035768
+          },
+          {
+            "layer": 8,
+            "R_F_linear": 0.000489672708091539,
+            "R_F_empirical": 0.07392632216215134,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 150.97088512503257
+          },
+          {
+            "layer": 9,
+            "R_F_linear": 0.001051671908996249,
+            "R_F_empirical": 0.05962780490517616,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 56.69810555469428
+          },
+          {
+            "layer": 10,
+            "R_F_linear": 0.003575940384954577,
+            "R_F_empirical": 0.0260532908141613,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 7.28571732453315
+          },
+          {
+            "layer": 11,
+            "R_F_linear": 0.0007560717887833512,
+            "R_F_empirical": 0.03280885890126228,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 43.39384088653453
+          },
+          {
+            "layer": 12,
+            "R_F_linear": 0.0005760185400323596,
+            "R_F_empirical": 0.0007773404940962791,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 1.3495060316159435
+          },
+          {
+            "layer": 13,
+            "R_F_linear": 0.0043758534439008396,
+            "R_F_empirical": 0.10200956463813782,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 23.311924392788104
+          },
+          {
+            "layer": 14,
+            "R_F_linear": 0.0011913603200830976,
+            "R_F_empirical": 0.03500905632972717,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 29.385783410417165
+          },
+          {
+            "layer": 15,
+            "R_F_linear": 0.012133376552430809,
+            "R_F_empirical": 0.08272644132375717,
+            "R_F_empirical_std": 0.0,
+            "alpha_attn": 6.818089009788763
+          }
+        ]
+      },
+      "friedman_test": {
+        "chi2": 1.5,
+        "p": 0.4723665527410149
+      },
+      "natural_random_ratio": {
+        "mean": 2.0280291725591804,
+        "median": 0.9823929042981978,
+        "values": [
+          0.10824400385022526,
+          0.996759965116075,
+          0.15656636100121143,
+          18.6091850891236,
+          1.1674505580923809,
+          1.6906849277811724,
+          1.6568677372707379,
+          1.7791002041414017,
+          0.8551682575176996,
+          0.9680258434803206,
+          1.4545805058256103,
+          0.7551597552004562,
+          0.6472070141014844,
+          0.38436039333322397,
+          1.134311285727756,
+          0.08479485938353216
+        ]
+      }
+    }
+  },
+  "caveats": [
+    "Natural text uses fixed paragraphs, not diverse corpus",
+    "Repeated tokens may cause degenerate attention patterns",
+    "Only 2 models tested (extremes of amplification range)"
+  ]
+}

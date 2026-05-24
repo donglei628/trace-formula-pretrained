@@ -1,0 +1,54 @@
+{
+  "widths": [
+    {
+      "width": 32,
+      "mean_rel_error_m": 0.058024772151059875,
+      "mean_rel_error_m_plus_2": 0.015489081134590393,
+      "std_rel_error_m": 0.02057427974267944,
+      "std_rel_error_m_plus_2": 0.012361015900824432
+    },
+    {
+      "width": 64,
+      "mean_rel_error_m": 0.039228576675956264,
+      "mean_rel_error_m_plus_2": 0.018257155960396874,
+      "std_rel_error_m": 0.021517961605041967,
+      "std_rel_error_m_plus_2": 0.01272478796202649
+    },
+    {
+      "width": 128,
+      "mean_rel_error_m": 0.02924011041383609,
+      "mean_rel_error_m_plus_2": 0.024691157158087954,
+      "std_rel_error_m": 0.0210433096080558,
+      "std_rel_error_m_plus_2": 0.014874910757795769
+    },
+    {
+      "width": 256,
+      "mean_rel_error_m": 0.020921170593930883,
+      "mean_rel_error_m_plus_2": 0.02102026811923064,
+      "std_rel_error_m": 0.012157466659536292,
+      "std_rel_error_m_plus_2": 0.013696289191429175
+    },
+    {
+      "width": 512,
+      "mean_rel_error_m": 0.02101513157751392,
+      "mean_rel_error_m_plus_2": 0.02084425378769811,
+      "std_rel_error_m": 0.015922385835908572,
+      "std_rel_error_m_plus_2": 0.016027054059885294
+    },
+    {
+      "width": 1024,
+      "mean_rel_error_m": 0.019773113753312834,
+      "mean_rel_error_m_plus_2": 0.01947199576590375,
+      "std_rel_error_m": 0.013559012906124298,
+      "std_rel_error_m_plus_2": 0.013561906225541435
+    },
+    {
+      "width": 2048,
+      "mean_rel_error_m": 0.014748525569400418,
+      "mean_rel_error_m_plus_2": 0.014734136763966848,
+      "std_rel_error_m": 0.014180694633360495,
+      "std_rel_error_m_plus_2": 0.014179980085150846
+    }
+  ],
+  "convergence_slope": null
+}

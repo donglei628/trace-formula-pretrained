@@ -250,7 +250,7 @@ def generate_figure2():
     if len(widths) > 0:
         improvement = err_m[0] / err_m2[0] if err_m2[0] > 0 else 0
         ax.annotate(f'{improvement:.1f}x better',
-                    xy=(0, err_m[0]), xytext=(1.5, err_m[0] + 0.5),
+                    xy=(0, err_m[0]), xytext=(1.2, err_m[0] * 0.7),
                     arrowprops=dict(arrowstyle='->', color='gray'),
                     fontsize=8, color='gray')
 
@@ -321,7 +321,7 @@ def generate_figure3():
 
     ax.set_xlabel(r'$\mathcal{R}_F^{\mathrm{predicted}}$ (trace formula)')
     ax.set_ylabel(r'$\mathcal{R}_F^{\mathrm{measured}}$ (empirical)')
-    ax.set_title(f'(a) Trace formula validation ({total_layers} layers, $R^2$={r_squared:.4f})', fontsize=10, pad=10)
+    ax.set_title(f'(a) Trace formula validation ({total_layers} layers, ratio 0.997\u20131.000)', fontsize=10, pad=10)
     ax.legend(loc='upper left', fontsize=7.5, framealpha=0.9)
     ax.grid(True, alpha=0.3)
     ax.set_aspect('equal')
@@ -434,6 +434,9 @@ def generate_figure4():
     # --- Left panel: R_F vs distortion (W2 quantization) ---
     ax = axes[0]
 
+    spearman_vals = r31['per_activation_W2_spearman']
+    mean_spearman = np.mean(list(spearman_vals.values()))
+
     for act in ['identity', 'relu', 'gelu', 'silu']:
         rf_vals = []
         dist_vals = []
@@ -442,27 +445,15 @@ def generate_figure4():
                 rf_vals.append(entry['actual_R_F'])
                 dist_vals.append(entry['distortion_W2_only'])
 
+        rho = spearman_vals[act]
         ax.scatter(rf_vals, dist_vals, c=act_colors[act], s=12, alpha=0.5,
-                   label=f'{act_labels[act]}', edgecolors='none')
-
-    # Add Spearman annotation
-    spearman_vals = r31['per_activation_W2_spearman']
-    mean_spearman = np.mean(list(spearman_vals.values()))
+                   label=f'{act_labels[act]} ($\\rho_s$={rho:.3f})', edgecolors='none')
 
     ax.set_xlabel(r'Radial fraction $\mathcal{R}_F$')
     ax.set_ylabel(r'Quantization distortion $\|\delta_q \hat{x}\| / \|\hat{x}\|$')
     ax.set_title(f'(a) $\\mathcal{{R}}_F$ vs distortion (mean Spearman $\\rho$={mean_spearman:.3f})', fontsize=10, pad=10)
     ax.legend(loc='upper right', fontsize=8, framealpha=0.9, markerscale=2)
     ax.grid(True, alpha=0.3)
-
-    # Add per-activation Spearman annotations
-    y_offset = 0.85
-    for act in ['identity', 'silu', 'gelu', 'relu']:
-        rho = spearman_vals[act]
-        ax.text(0.02, y_offset, f'{act_labels[act]}: $\\rho_s$={rho:.3f}',
-                transform=ax.transAxes, fontsize=7, color=act_colors[act],
-                fontweight='bold')
-        y_offset -= 0.05
 
     # --- Right panel: Control variable stability ---
     ax = axes[1]

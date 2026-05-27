@@ -1,5 +1,5 @@
 """
-Theorem 5 Verification: Radial Fraction R_F for various activation functions.
+Activation Integral Verification (Proposition 6.3): Radial Fraction R_F for various activation functions.
 
 Formula:
     R_F^phi = E[phi(z)*z]^2 / (E[phi(z)^2] * E[z^2])

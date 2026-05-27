@@ -1,6 +1,6 @@
 """
-Generate publication-quality figures for Paper 2:
-"A Trace Formula for Pre-Norm Transformers"
+Generate publication-quality figures for:
+"Radial Fraction in Pre-Norm Transformers: A Trace Formula with Applications to Critical Depth and Quantization"
 
 Figures saved as PDF to paper2/figures/
 """

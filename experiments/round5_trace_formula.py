@@ -2,9 +2,8 @@
 Round 5 Follow-up: Verify the trace formula for R_F(linear)
 =============================================================
 
-Theory: For M = W2*W1 acting linearly on x_hat:
-    R_F(linear) = [tr(M)^2 + ||M||_F^2 + tr(M^2)] / [m * ||M||_F^2]
-                = 1/m + tr(M)^2 / (m * ||M||_F^2) + tr(M^2) / (m * ||M||_F^2)
+Theory (Theorem 6.1): For M = W2*W1 acting linearly on x_hat:
+    R_F(linear) = [tr(M)^2 + ||M||_F^2 + tr(M^2)] / [(m+2) * ||M||_F^2]
 
 Test: Compute this formula and compare to measured R_F(linear).
 """
